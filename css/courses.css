@@ -1,0 +1,102 @@
+/* Start Variables */
+:root {
+    --box-shadow: 0 0 10px #ddd;
+    --dark-color: black;
+    --white-color: white;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --main-transition: 0.3s;
+    --main-background: #eee;
+    --border: 1px solid #ccc;
+    --border2: 1px solid #eee;
+}
+/* End Varaibles */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+*:focus {
+    outline: none;
+}
+/* Start Scrollbehavior */
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+/* End Scrollbehavior */
+/* End Global Rules */
+/* Start Courses Page */
+/* Start Content Section */
+/* Start Courses Content */
+.page .content .courses-page {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+    .page .content .courses-page {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+.page .content .courses-page .course {
+    overflow: hidden;
+}
+.page .content .courses-page .course .main-img {
+    max-width: 100%;
+    width: 100%;
+}
+.page .content .courses-page .course .sub-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--white-color);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.page .content .courses-page .course .course-body p {
+    line-height: 1.4;
+}
+.page .content .courses-page .course .course-info {
+    position: absolute;
+    height: 24px;
+    left: 50%;
+    bottom: 44px;
+    transform: translateX(-50%);
+}
+.page .content .courses-page .course .info {
+    border-top: var(--border2);
+}
+/* End Courses Content */
+/* End Content Section */
+/* End Courses Page */
